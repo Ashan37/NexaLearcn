@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar"; // ✅ correct relative path
+import Navbar from "../components/navbar/Navbar";
+import Hero from "../components/home/Hero";
 import Testimonials from "../components/home/Testimonials";
 import CallToAction from "../components/home/CallToAction";
 import Footer from "../components/footer/Footer";
@@ -8,7 +9,8 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      {/* <Hero/>
+      <Hero/>
+      {/* 
       <Feature/>
       <CoursesPreview/>
       <Testimonials/>
