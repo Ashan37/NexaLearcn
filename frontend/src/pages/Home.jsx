@@ -6,7 +6,7 @@ import CoursesPreview from "../components/home/CoursesPreview";
 import Testimonials from "../components/home/Testimonials";
 import CallToAction from "../components/home/CallToAction";
 import Footer from "../components/footer/Footer";
-// import ChatBotWidget from "../components/home/ChatBotWidget"; 
+import ChatBotWidget from "../components/home/ChatBotWidget"; 
 
 const Home = () => {
   return (
@@ -16,12 +16,8 @@ const Home = () => {
       <Feature/>
       <CoursesPreview/>
       <Testimonials/>
-      {/* 
-      
-      
-      
       <CallToAction/>
-      <ChatBotWidget/> */}
+      <ChatBotWidget/>
       <Footer/>  
     </div>
   );
