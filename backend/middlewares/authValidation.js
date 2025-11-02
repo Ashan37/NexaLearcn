@@ -1,4 +1,3 @@
-// backend/middlewares/authValidation.js
 import Joi from "joi";
 
 export const signupValidation = (req, res, next) => {

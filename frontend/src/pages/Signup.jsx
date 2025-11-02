@@ -17,12 +17,13 @@ const Signup = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  const [success,setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.password) {
@@ -30,10 +31,29 @@ const Signup = () => {
       return;
     }
 
-   
-    alert(`Welcome to NexaLearn, ${formData.name}! 🎉`);
-    setError("");
-    setFormData({ name: "", email: "", password: "" });
+    try{
+      const res=await fetch("http://localhost:5000/api/ath/signup",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify(formData) 
+      });
+      const data=await res.json();
+      if(!res.ok){
+        setError(data.message||"Signup failed");
+        setSuccess("");
+        return;
+      }
+      setError("");
+      setSuccess("Account created successfully!");
+      setFormData({name:"",email:"",password:""});
+    }
+    catch(err){
+      setError("Server error. Please try again later.");
+      setSuccess("");
+      console.error(err);
+    }
   };
 
   return (

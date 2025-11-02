@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import aiRoutes from "./routes/aiRoutes.js";
 import authRouter from "./routes/authRouter.js";
+import bodyParser from "body-parser";
 
 dotenv.config(); 
 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 
+app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
 
