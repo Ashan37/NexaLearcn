@@ -1,8 +1,9 @@
+// backend/routes/aiRoutes.js
 import express from "express";
-import { getAdvise } from "../controllers/aiController.js";
+import { getAdvice } from "../controllers/aiController.js";
 
 const router = express.Router();
 
-router.post("/", getAdvise);
+router.post("/", getAdvice);
 
 export default router;
