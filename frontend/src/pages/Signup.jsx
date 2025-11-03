@@ -17,7 +17,7 @@ const Signup = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [success,setSuccess] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -31,25 +31,25 @@ const Signup = () => {
       return;
     }
 
-    try{
-      const res=await fetch("http://localhost:5000/api/ath/signup",{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        body:JSON.stringify(formData) 
+        body: JSON.stringify(formData),
       });
-      const data=await res.json();
-      if(!res.ok){
-        setError(data.message||"Signup failed");
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.message || "Signup failed");
         setSuccess("");
         return;
       }
       setError("");
       setSuccess("Account created successfully!");
-      setFormData({name:"",email:"",password:""});
-    }
-    catch(err){
+      setFormData({ name: "", email: "", password: "" });
+      alert("Signup successful! You can now sign in.");
+    } catch (err) {
       setError("Server error. Please try again later.");
       setSuccess("");
       console.error(err);
@@ -61,7 +61,6 @@ const Signup = () => {
       <Navbar />
       <div className="flex items-center justify-center min-h-screen px-4 py-16 bg-gray-50">
         <div className="w-full max-w-md p-8 bg-white border border-gray-200 shadow-xl rounded-2xl">
-       
           <h2 className="mb-2 text-3xl font-bold text-center text-gray-900">
             Create Your Account
           </h2>
@@ -69,9 +68,7 @@ const Signup = () => {
             Join NexaLearn and start your personalized learning journey.
           </p>
 
-    
           <form onSubmit={handleSubmit} className="space-y-5">
-          
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Full Name
@@ -89,7 +86,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Email Address
@@ -107,7 +103,6 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Password */}
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Password
@@ -136,10 +131,8 @@ const Signup = () => {
               </div>
             </div>
 
-            {/* Error Message */}
             {error && <p className="text-sm text-red-600">{error}</p>}
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"

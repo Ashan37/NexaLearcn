@@ -25,7 +25,6 @@ const Signin = () => {
       return;
     }
 
-    // ✅ Mock success — replace later with backend login API
     alert(`Welcome back, ${formData.email}! 👋`);
     setError("");
     setFormData({ email: "", password: "" });
