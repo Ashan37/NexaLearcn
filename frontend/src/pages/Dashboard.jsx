@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
+
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -52,7 +51,6 @@ const Dashboard = () => {
     }
   ];
 
-  // Active courses
   const activeCourses = [
     {
       id: 1,
@@ -86,7 +84,6 @@ const Dashboard = () => {
     }
   ];
 
-  // Recent achievements
   const achievements = [
     {
       title: 'Fast Learner',
@@ -111,7 +108,6 @@ const Dashboard = () => {
     }
   ];
 
-  // Recommended courses
   const recommendedCourses = [
     {
       title: 'Advanced AI Chat Development',
@@ -131,7 +127,7 @@ const Dashboard = () => {
     }
   ];
 
-  // Learning activity
+
   const learningActivity = [
     { day: 'Mon', hours: 4.5 },
     { day: 'Tue', hours: 6.2 },
@@ -155,9 +151,7 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
 
-      {/* Dashboard Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -181,7 +175,7 @@ const Dashboard = () => {
       </div>
 
       <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        {/* Stats Grid */}
+
         <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <div key={index} className="p-6 transition-shadow bg-white rounded-lg shadow-md hover:shadow-lg">
@@ -199,9 +193,9 @@ const Dashboard = () => {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Main Content Area */}
+
           <div className="space-y-8 lg:col-span-2">
-            {/* Continue Learning */}
+
             <div className="p-6 bg-white rounded-lg shadow-md">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">Continue Learning</h2>
@@ -257,7 +251,6 @@ const Dashboard = () => {
               </div>
             </div>
 
-            {/* Learning Activity Chart */}
             <div className="p-6 bg-white rounded-lg shadow-md">
               <h2 className="mb-6 text-2xl font-bold text-gray-900">Weekly Learning Activity</h2>
               <div className="flex items-end justify-between h-64 space-x-4">
@@ -286,9 +279,8 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-8">
-            {/* Recent Achievements */}
+
             <div className="p-6 bg-white rounded-lg shadow-md">
               <h2 className="mb-4 text-xl font-bold text-gray-900">Recent Achievements</h2>
               <div className="space-y-4">
@@ -307,7 +299,6 @@ const Dashboard = () => {
               </div>
             </div>
 
-            {/* AI Assistant Quick Access */}
             <div className="p-6 text-white rounded-lg shadow-md bg-gradient-to-br from-indigo-600 to-purple-600">
               <div className="flex items-center mb-4">
                 <SparklesIcon className="w-8 h-8 mr-3" />
@@ -321,7 +312,6 @@ const Dashboard = () => {
               </button>
             </div>
 
-            {/* Recommended Courses */}
             <div className="p-6 bg-white rounded-lg shadow-md">
               <h2 className="mb-4 text-xl font-bold text-gray-900">Recommended for You</h2>
               <div className="space-y-4">
@@ -351,8 +341,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

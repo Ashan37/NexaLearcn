@@ -7,8 +7,7 @@ import {
   EnvelopeIcon,
   LockClosedIcon,
 } from "@heroicons/react/24/outline";
-import Navbar from "../components/navbar/Navbar";
-import Footer from "../components/footer/Footer";
+
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -51,15 +50,13 @@ const Signup = () => {
         },
         body: JSON.stringify(formData),
       });
-      
+
       const data = await res.json();
-      
+
       if (res.ok && data.success) {
-        // Show success message
         setSuccess("Account created successfully! Redirecting to sign in...");
         setError("");
-        
-        // Navigate to signin page after a brief delay
+
         setTimeout(() => {
           navigate("/signin");
         }, 1500);
