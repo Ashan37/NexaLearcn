@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   EyeIcon,
   EyeSlashIcon,
@@ -17,7 +18,9 @@ const Signup = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,11 +28,20 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    setSuccess("");
 
     if (!formData.name || !formData.email || !formData.password) {
       setError("Please fill in all fields");
       return;
     }
+
+    if (formData.password.length < 6) {
+      setError("Password must be at least 6 characters");
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const res = await fetch("http://localhost:5000/api/auth/signup", {
@@ -39,20 +51,28 @@ const Signup = () => {
         },
         body: JSON.stringify(formData),
       });
+      
       const data = await res.json();
-      if (!res.ok) {
+      
+      if (res.ok && data.success) {
+        // Show success message
+        setSuccess("Account created successfully! Redirecting to sign in...");
+        setError("");
+        
+        // Navigate to signin page after a brief delay
+        setTimeout(() => {
+          navigate("/signin");
+        }, 1500);
+      } else {
         setError(data.message || "Signup failed");
         setSuccess("");
-        return;
       }
-      setError("");
-      setSuccess("Account created successfully!");
-      setFormData({ name: "", email: "", password: "" });
-      alert("Signup successful! You can now sign in.");
     } catch (err) {
-      setError("Server error. Please try again later.");
+      console.error("Signup error:", err);
+      setError("Unable to connect to server. Please try again later.");
       setSuccess("");
-      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -132,12 +152,14 @@ const Signup = () => {
             </div>
 
             {error && <p className="text-sm text-red-600">{error}</p>}
+            {success && <p className="text-sm text-green-600">{success}</p>}
 
             <button
               type="submit"
-              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2"
+              disabled={loading}
+              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
             >
-              Sign Up
+              {loading ? "Creating Account..." : "Sign Up"}
             </button>
           </form>
 
