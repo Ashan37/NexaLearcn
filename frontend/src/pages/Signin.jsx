@@ -43,11 +43,11 @@ const Signin = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
-        // Store token and user data
+        
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
         
-        // Navigate to dashboard
+        
         navigate("/dashboard");
       } else {
         setError(data.message || "Invalid email or password");
@@ -151,6 +151,10 @@ const Signin = () => {
             className="w-5 h-5"
           />
           Continue with Google
+        </button>
+
+        <button className="flex items-center justify-center w-full gap-3 mt-4 text-white bg-black py-2.5 rounded-lg font-bold border border-black hover:bg-gray-900 transition-colors shadow-lg">
+          <a href="/adminsignin">Admin Login</a>
         </button>
 
         
