@@ -6,6 +6,7 @@ import aiRoutes from "./routes/aiRoutes.js";
 import authRouter from "./routes/authRouter.js";
 import adminRouter from "./routes/adminRouter.js";
 import bodyParser from "body-parser";
+import courseRoutes from "./routes/courseRoutes.js";
 
 dotenv.config(); 
 
@@ -21,5 +22,6 @@ app.use(express.json());
 app.use("/api/ai", aiRoutes);
 app.use("/api/auth", authRouter);
 app.use("/api/admin", adminRouter);
+app.use("/api/courses", courseRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
