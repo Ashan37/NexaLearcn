@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import AdminSignin from "./pages/admin/AdminSignin";
 import Dashboard from "./pages/Dashboard";
+import AddCourse from "./pages/admin/AddCourse";
+
 function App() {
   return (
     <>
@@ -19,6 +21,7 @@ function App() {
         <Route path="/adminsignin" element={<AdminSignin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/addcourse" element={<AddCourse />} />
       </Routes>
     </>
   );
