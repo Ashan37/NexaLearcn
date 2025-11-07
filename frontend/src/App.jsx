@@ -9,6 +9,7 @@ import Signin from "./pages/Signin";
 import AdminSignin from "./pages/admin/AdminSignin";
 import Dashboard from "./pages/Dashboard";
 import AddCourse from "./pages/admin/AddCourse";
+import Courses from "./pages/Courses";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/adminsignin" element={<AdminSignin />} />
         <Route path="/signup" element={<Signup />} />

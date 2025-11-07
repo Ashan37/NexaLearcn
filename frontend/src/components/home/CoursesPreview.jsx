@@ -1,33 +1,25 @@
-import React from "react";
-import { StarIcon, ClockIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { StarIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 const CoursesPreview = () => {
-  const courses = [
-    {
-      title: "Web Development Fundamentals",
-      description:
-        "Learn the core technologies behind every modern website — HTML, CSS, and JavaScript — and start building real projects.",
-      duration: "6 weeks",
-      level: "Beginner",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "Data Science with Python",
-      description:
-        "Master data analysis, visualization, and machine learning using Python libraries like Pandas, NumPy, and Scikit-learn.",
-      duration: "8 weeks",
-      level: "Intermediate",
-      image: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      title: "AI & Machine Learning Essentials",
-      description:
-        "Understand the foundations of Artificial Intelligence and Machine Learning to create intelligent solutions for real-world problems.",
-      duration: "10 weeks",
-      level: "Advanced",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchCourses = async () => {
+    try {
+      const res = await axios.get("http://localhost:5000/api/courses");
+      setCourses(res.data);
+    } catch (error) {
+      console.error("Failed to load courses", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
 
   return (
     <section className="py-20 bg-white">
@@ -39,10 +31,20 @@ const CoursesPreview = () => {
             Explore Popular Learning Paths
           </h1>
           <p className="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
-            Whether you’re starting your journey or upskilling for the future, NexaLearn’s AI-powered
-            platform connects you with the right course for your goals.
+            Whether you're starting your journey or upskilling for the future, NexaLearn’s AI-powered
+            platform connects you with the right course.
           </p>
         </div>
+
+        {loading && (
+          <p className="text-lg text-center text-gray-500">Loading courses...</p>
+        )}
+
+        {!loading && courses.length === 0 && (
+          <p className="text-lg text-center text-gray-600">
+            No courses available yet. Please check back soon!
+          </p>
+        )}
 
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {courses.map((course, index) => (
@@ -53,7 +55,7 @@ const CoursesPreview = () => {
 
               <div className="relative">
                 <img
-                  src={course.image}
+                  src={course.image || "https://via.placeholder.com/400"}
                   alt={course.title}
                   className="object-cover w-full h-48"
                 />
@@ -71,6 +73,7 @@ const CoursesPreview = () => {
                     <ClockIcon className="w-5 h-5 text-purple-500" />
                     <span>{course.duration}</span>
                   </div>
+
                   <div className="flex items-center gap-1">
                     <StarIcon className="w-5 h-5 text-yellow-400" />
                   </div>
@@ -84,11 +87,13 @@ const CoursesPreview = () => {
           ))}
         </div>
 
-        {/* Footer CTA */}
+      
         <div className="mt-16 text-center">
-          <button className="px-8 py-3 font-semibold text-white transition bg-purple-600 rounded-lg hover:bg-purple-700">
-            View All Courses
-          </button>
+          <a href="/courses">
+            <button className="px-8 py-3 font-semibold text-white transition bg-purple-600 rounded-lg hover:bg-purple-700">
+              View All Courses
+            </button>
+          </a>
         </div>
       </div>
     </section>
