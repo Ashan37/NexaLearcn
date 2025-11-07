@@ -6,7 +6,6 @@ const navItems = [
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
   { name: 'Courses', href: '/courses' },
-  { name: 'AI Chat', href: '/ai' },
   
 ]
 
@@ -51,7 +50,7 @@ const Navbar = () => {
             })}
           </nav>
 
-          {/* Actions */}
+      
           <div className="items-center hidden space-x-3 md:flex">
              <a
               href="/ai"

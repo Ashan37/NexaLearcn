@@ -10,6 +10,7 @@ import AdminSignin from "./pages/admin/AdminSignin";
 import Dashboard from "./pages/Dashboard";
 import AddCourse from "./pages/admin/AddCourse";
 import Courses from "./pages/Courses";
+import AIChat from "./pages/AIChat";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/addcourse" element={<AddCourse />} />
+        <Route path="/ai" element={<AIChat />} />
       </Routes>
     </>
   );

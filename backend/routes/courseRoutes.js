@@ -1,6 +1,6 @@
 import express from 'express';
 import {addCourse,getCourses} from '../controllers/courseController.js';
-import { protectAdmin } from '../middlewares/authMiddleware.js';
+import { protectAdmin } from '../middlewares/adminValidation.js';
 
 const router = express.Router();
 
