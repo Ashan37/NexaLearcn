@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import StudentSidebar from '../components/sidebar/StudentSidebar';
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -150,9 +150,11 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-
-      <div className="bg-white border-b border-gray-200">
+    <div className="flex min-h-screen bg-gray-50">
+      <StudentSidebar />
+      
+      <div className="flex-1">
+        <div className="bg-white border-b border-gray-200">
         <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div>
@@ -340,6 +342,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
