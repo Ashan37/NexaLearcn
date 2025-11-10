@@ -5,7 +5,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
-  { name: "Courses", href: "/courses" },
+  
 ];
 
 const Navbar = () => {
@@ -53,12 +53,6 @@ const Navbar = () => {
           </nav>
 
           <div className="items-center hidden space-x-3 md:flex">
-            <a
-              href="/ai"
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
-              AI Chat
-            </a>
             <a
               href="/signin"
               className="text-sm font-medium text-gray-600 hover:text-gray-900"
@@ -144,12 +138,6 @@ const Navbar = () => {
               className="block px-4 py-2 text-sm font-medium text-center text-gray-700 rounded-md hover:bg-gray-50"
             >
               Sign in
-            </a>
-            <a
-              href="/ai"
-              className="block px-4 py-2 text-sm font-medium text-center text-indigo-700 bg-indigo-100 rounded-md hover:bg-indigo-200"
-            >
-              AI Chat
             </a>
             <a
               href="/signup"
