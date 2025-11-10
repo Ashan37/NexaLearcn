@@ -40,7 +40,7 @@ const AddCourse = () => {
     const token = localStorage.getItem("adminToken");
 
     try {
-      const res = await fetch("http://localhost:5000/api/courses", {
+      const res = await fetch("http://localhost:5000/api/courses/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

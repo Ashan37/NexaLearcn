@@ -118,7 +118,7 @@ const StudentSidebar = () => {
           </div>
 
           {/* Navigation Menu */}
-          <nav className="flex-1 px-3 py-6 overflow-y-auto">
+          <nav className="flex-1 px-3 py-6">
             <ul className="space-y-2">
               {menuItems.map((item) => {
                 const Icon = item.icon;

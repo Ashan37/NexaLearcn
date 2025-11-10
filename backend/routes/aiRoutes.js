@@ -1,11 +1,11 @@
 import express from 'express';
 import { handleChat, getChatHistory } from '../controllers/aiController.js';
-import { protectAdmin } from '../middlewares/adminValidation.js'; 
+import { protect } from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/chat', protectAdmin, handleChat);
+router.post('/chat', protect, handleChat);
 
-router.get('/history', protectAdmin, getChatHistory);
+router.get('/history', protect, getChatHistory);
 
 export default router;
