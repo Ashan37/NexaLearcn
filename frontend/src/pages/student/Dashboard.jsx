@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import StudentSidebar from '../components/sidebar/StudentSidebar';
+import StudentSidebar from '../../components/sidebar/StudentSidebar';
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -52,8 +52,6 @@ const Dashboard = () => {
 
   const fetchUserData = async (token) => {
     try {
-      // You can create a dedicated endpoint for user dashboard data
-      // For now, we'll use the stored user data and enhance it
       setLoading(false);
     } catch (err) {
       console.error('Error fetching user data:', err);
@@ -401,7 +399,7 @@ const Dashboard = () => {
 
           <div className="space-y-8">
 
-            <div className="p-6 bg-white rounded-lg shadow-md">
+            {/* <div className="p-6 bg-white rounded-lg shadow-md">
               <h2 className="mb-4 text-xl font-bold text-gray-900">Recent Achievements</h2>
               <div className="space-y-4">
                 {achievements.map((achievement, index) => (
@@ -417,7 +415,7 @@ const Dashboard = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             <div className="p-6 text-white rounded-lg shadow-md bg-gradient-to-br from-indigo-600 to-purple-600">
               <div className="flex items-center mb-4">

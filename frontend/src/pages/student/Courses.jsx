@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import StudentSidebar from "../components/sidebar/StudentSidebar";
+import StudentSidebar from "../../components/sidebar/StudentSidebar";
 import {
   MagnifyingGlassIcon,
   AcademicCapIcon,

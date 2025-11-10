@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import StudentSidebar from "../components/sidebar/StudentSidebar";
+import StudentSidebar from "../../components/sidebar/StudentSidebar";
 import {
   PaperAirplaneIcon,
   SparklesIcon,

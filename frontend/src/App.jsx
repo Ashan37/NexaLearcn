@@ -7,10 +7,11 @@ import Contact from "./pages/Contact";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import AdminSignin from "./pages/admin/AdminSignin";
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./pages/student/Dashboard";
 import AddCourse from "./pages/admin/AddCourse";
-import Courses from "./pages/Courses";
-import AIChat from "./pages/AIChat";
+import Courses from "./pages/student/Courses";
+import AIChat from "./pages/student/AIChat";
+import Progress from "./pages/student/Progress";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/progress" element={<Progress />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/adminsignin" element={<AdminSignin />} />
         <Route path="/signup" element={<Signup />} />
