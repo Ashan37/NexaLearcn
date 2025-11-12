@@ -260,20 +260,20 @@ const Progress = () => {
   ];
 
   const colorClasses = {
-    indigo: 'bg-indigo-100 text-indigo-600',
-    green: 'bg-green-100 text-green-600',
+    emerald: 'bg-emerald-100 text-emerald-600',
+    teal: 'bg-teal-100 text-teal-600',
+    cyan: 'bg-cyan-100 text-cyan-600',
+    amber: 'bg-amber-100 text-amber-600',
     blue: 'bg-blue-100 text-blue-600',
-    yellow: 'bg-yellow-100 text-yellow-600',
-    orange: 'bg-orange-100 text-orange-600',
-    purple: 'bg-purple-100 text-purple-600',
+    green: 'bg-green-100 text-green-600',
     red: 'bg-red-100 text-red-600'
   };
 
   const getProgressColor = (progress) => {
-    if (progress >= 80) return 'bg-green-600';
-    if (progress >= 50) return 'bg-blue-600';
-    if (progress >= 30) return 'bg-yellow-600';
-    return 'bg-orange-600';
+    if (progress >= 80) return 'bg-emerald-600';
+    if (progress >= 50) return 'bg-teal-600';
+    if (progress >= 30) return 'bg-cyan-600';
+    return 'bg-amber-600';
   };
 
   const getGradeColor = (grade) => {
@@ -288,7 +288,7 @@ const Progress = () => {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
         <div className="text-center">
-          <div className="inline-block w-16 h-16 border-b-2 border-indigo-600 rounded-full animate-spin"></div>
+          <div className="inline-block w-16 h-16 border-b-2 border-emerald-600 rounded-full animate-spin"></div>
           <p className="mt-4 text-gray-600">Loading your progress...</p>
         </div>
       </div>
@@ -305,7 +305,7 @@ const Progress = () => {
       
       <div className="flex-1">
         {/* Header */}
-        <div className="text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div className="text-white bg-gradient-to-r from-emerald-600 to-teal-600">
           <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <div>
@@ -313,7 +313,7 @@ const Progress = () => {
                   <ChartBarIcon className="w-12 h-12" />
                   <h1 className="text-4xl font-bold">Learning Progress</h1>
                 </div>
-                <p className="text-lg text-indigo-100">
+                <p className="text-lg text-emerald-100">
                   Track your learning journey and achievements
                 </p>
               </div>
@@ -323,8 +323,8 @@ const Progress = () => {
                     onClick={() => setTimeframe('week')}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       timeframe === 'week'
-                        ? 'bg-white text-indigo-600'
-                        : 'bg-indigo-500 text-white hover:bg-indigo-400'
+                        ? 'bg-white text-emerald-600'
+                        : 'bg-emerald-500 text-white hover:bg-emerald-400'
                     }`}
                   >
                     Week
@@ -333,8 +333,8 @@ const Progress = () => {
                     onClick={() => setTimeframe('month')}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       timeframe === 'month'
-                        ? 'bg-white text-indigo-600'
-                        : 'bg-indigo-500 text-white hover:bg-indigo-400'
+                        ? 'bg-white text-emerald-600'
+                        : 'bg-emerald-500 text-white hover:bg-emerald-400'
                     }`}
                   >
                     Month
@@ -343,8 +343,8 @@ const Progress = () => {
                     onClick={() => setTimeframe('year')}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                       timeframe === 'year'
-                        ? 'bg-white text-indigo-600'
-                        : 'bg-indigo-500 text-white hover:bg-indigo-400'
+                        ? 'bg-white text-emerald-600'
+                        : 'bg-emerald-500 text-white hover:bg-emerald-400'
                     }`}
                   >
                     Year
@@ -383,7 +383,7 @@ const Progress = () => {
               <div className="p-6 bg-white rounded-lg shadow-md">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-gray-900">Course Progress</h2>
-                  <a href="/courses" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700">
+                  <a href="/courses" className="text-sm font-semibold text-emerald-600 hover:text-emerald-700">
                     View All Courses
                   </a>
                 </div>
@@ -396,7 +396,7 @@ const Progress = () => {
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-2">
                               <h3 className="text-lg font-bold text-gray-900">{course.title}</h3>
-                              <span className="px-2 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded">
+                              <span className="px-2 py-1 text-xs font-semibold text-emerald-700 bg-emerald-100 rounded">
                                 {course.category}
                               </span>
                             </div>
@@ -439,7 +439,7 @@ const Progress = () => {
 
                         {/* Action Button */}
                         <div className="mt-4">
-                          <button className="w-full px-4 py-2 text-sm font-semibold text-white transition-colors bg-indigo-600 rounded-lg hover:bg-indigo-700">
+                          <button className="w-full px-4 py-2 text-sm font-semibold text-white transition-colors bg-emerald-600 rounded-lg hover:bg-emerald-700">
                             {course.progress === 100 ? 'Review Course' : 'Continue Learning'}
                           </button>
                         </div>
@@ -451,12 +451,12 @@ const Progress = () => {
                     <BookOpenIcon className="w-16 h-16 mx-auto mb-4 text-gray-400" />
                     <h3 className="mb-2 text-lg font-semibold text-gray-900">No Enrolled Courses</h3>
                     <p className="mb-4 text-gray-600">Start learning to track your progress!</p>
-                    <a 
+                    <a
                       href="/courses"
-                      className="inline-flex items-center px-6 py-3 font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700"
+                      className="inline-flex items-center px-6 py-3 font-semibold text-white bg-emerald-600 rounded-lg hover:bg-emerald-700"
                     >
                       <AcademicCapIcon className="w-5 h-5 mr-2" />
-                      Browse Courses
+                      Explore Courses
                     </a>
                   </div>
                 )}
@@ -476,7 +476,7 @@ const Progress = () => {
                           <div className="relative w-full bg-gray-200 rounded-t-lg" style={{ height: '100%' }}>
                             <div 
                               className={`absolute bottom-0 w-full transition-all duration-500 rounded-t-lg ${
-                                activity.hours > 0 ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-gray-300'
+                                activity.hours > 0 ? 'bg-teal-600 hover:bg-teal-700' : 'bg-gray-300'
                               }`}
                               style={{ height: `${activity.hours > 0 ? (activity.hours / maxHours) * 100 : 5}%` }}
                             >
@@ -495,7 +495,7 @@ const Progress = () => {
                     <div className="flex items-center justify-center gap-6 mt-6">
                       <div>
                         <span className="text-sm text-gray-600">Total Hours: </span>
-                        <span className="text-lg font-bold text-indigo-600">
+                        <span className="text-lg font-bold text-emerald-600">
                           {weeklyActivity.reduce((sum, a) => sum + a.hours, 0).toFixed(1)}h
                         </span>
                       </div>
@@ -545,9 +545,9 @@ const Progress = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center p-3 space-x-3 rounded-lg bg-purple-50">
-                    <div className="p-2 bg-purple-100 rounded-lg">
-                      <StarSolidIcon className="w-6 h-6 text-purple-600" />
+                  <div className="flex items-center p-3 space-x-3 rounded-lg bg-amber-50">
+                    <div className="p-2 bg-amber-100 rounded-lg">
+                      <StarSolidIcon className="w-6 h-6 text-amber-600" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-sm font-semibold text-gray-900">Top Performer</h3>
@@ -558,7 +558,7 @@ const Progress = () => {
               </div>
 
               {/* Progress Summary */}
-              <div className="p-6 text-white rounded-lg shadow-md bg-gradient-to-br from-indigo-600 to-purple-600">
+              <div className="p-6 text-white rounded-lg shadow-md bg-gradient-to-br from-emerald-600 to-teal-600">
                 <div className="flex items-center gap-2 mb-4">
                   <ChartPieIcon className="w-6 h-6" />
                   <h2 className="text-xl font-bold">Progress Summary</h2>
@@ -566,27 +566,27 @@ const Progress = () => {
                 <div className="space-y-4">
                   <div>
                     <div className="flex items-center justify-between mb-2 text-sm">
-                      <span className="text-indigo-100">Overall Completion</span>
+                      <span className="text-emerald-100">Overall Completion</span>
                       <span className="font-bold">{averageProgress}%</span>
                     </div>
-                    <div className="w-full h-2 bg-indigo-800 rounded-full">
+                    <div className="w-full h-2 bg-emerald-800 rounded-full">
                       <div 
                         className="h-2 transition-all bg-white rounded-full"
                         style={{ width: `${averageProgress}%` }}
                       ></div>
                     </div>
                   </div>
-                  <div className="pt-4 border-t border-indigo-400">
+                  <div className="pt-4 border-t border-emerald-400">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-indigo-100">Courses</span>
+                      <span className="text-sm text-emerald-100">Courses</span>
                       <span className="text-2xl font-bold">{totalCourses}</span>
                     </div>
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm text-indigo-100">Hours</span>
+                      <span className="text-sm text-emerald-100">Hours</span>
                       <span className="text-2xl font-bold">{totalHoursSpent}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-indigo-100">Completed</span>
+                      <span className="text-sm text-emerald-100">Completed</span>
                       <span className="text-2xl font-bold">{completedCourses}</span>
                     </div>
                   </div>

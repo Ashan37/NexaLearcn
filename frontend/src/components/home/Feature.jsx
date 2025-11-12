@@ -51,7 +51,7 @@ const Feature = () => {
               key={index}
               className="p-6 transition-all duration-300 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105"
             >
-              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-indigo-600 rounded-lg">
+              <div className="flex items-center justify-center w-12 h-12 mb-4 text-white bg-teal-600 rounded-lg">
                 <feature.icon className="w-6 h-6" />
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">

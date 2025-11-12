@@ -42,8 +42,8 @@ const Navbar = () => {
                   aria-current={isActive ? "page" : undefined}
                   className={`transition-colors duration-150 px-2 py-1 rounded-md ${
                     isActive
-                      ? "text-indigo-700 underline decoration-indigo-500 font-medium"
-                      : "text-gray-600 hover:text-indigo-600 hover:underline hover:decoration-indigo-300"
+                      ? "text-emerald-700 underline decoration-emerald-500 font-medium"
+                      : "text-gray-600 hover:text-emerald-600 hover:underline hover:decoration-emerald-300"
                   }`}
                 >
                   {item.name}
@@ -62,7 +62,7 @@ const Navbar = () => {
 
             <a
               href="/signup"
-              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 border border-transparent rounded-md shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
             >
               Get Started
             </a>
@@ -73,7 +73,7 @@ const Navbar = () => {
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
               aria-label="Toggle menu"
-              className="inline-flex items-center justify-center p-2 text-gray-600 rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 text-gray-600 rounded-md hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
             >
               {open ? (
                 <svg
@@ -123,7 +123,7 @@ const Navbar = () => {
                 aria-current={isActive ? "page" : undefined}
                 className={`block px-3 py-2 text-base font-medium rounded-md ${
                   isActive
-                    ? "text-indigo-700 bg-indigo-50 underline decoration-indigo-400"
+                    ? "text-emerald-700 bg-emerald-50 underline decoration-emerald-400"
                     : "text-gray-700 hover:bg-gray-50 hover:text-gray-900"
                 }`}
               >
@@ -141,7 +141,7 @@ const Navbar = () => {
             </a>
             <a
               href="/signup"
-              className="block px-4 py-2 text-sm font-medium text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
+              className="block px-4 py-2 text-sm font-medium text-center text-white bg-emerald-600 rounded-md hover:bg-emerald-700"
             >
               Get Started
             </a>

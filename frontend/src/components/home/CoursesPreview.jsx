@@ -26,7 +26,7 @@ const CoursesPreview = () => {
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
 
         <div className="mb-12 text-center">
-          <h2 className="font-semibold tracking-wide text-purple-600 uppercase">Courses</h2>
+          <h2 className="font-semibold tracking-wide uppercase text-emerald-600">Courses</h2>
           <h1 className="mt-2 text-4xl font-bold text-gray-900">
             Explore Popular Learning Paths
           </h1>
@@ -59,7 +59,7 @@ const CoursesPreview = () => {
                   alt={course.title}
                   className="object-cover w-full h-48"
                 />
-                <div className="absolute px-3 py-1 text-xs text-white bg-purple-600 rounded-full shadow top-3 right-3">
+                <div className="absolute px-3 py-1 text-xs text-white rounded-full shadow bg-amber-600 top-3 right-3">
                   {course.level}
                 </div>
               </div>
@@ -70,7 +70,7 @@ const CoursesPreview = () => {
 
                 <div className="flex items-center justify-between text-sm text-gray-500">
                   <div className="flex items-center gap-1">
-                    <ClockIcon className="w-5 h-5 text-purple-500" />
+                    <ClockIcon className="w-5 h-5 text-amber-500" />
                     <span>{course.duration}</span>
                   </div>
 
@@ -90,7 +90,7 @@ const CoursesPreview = () => {
       
         <div className="mt-16 text-center">
           <a href="/courses">
-            <button className="px-8 py-3 font-semibold text-white transition bg-purple-600 rounded-lg hover:bg-purple-700">
+            <button className="px-8 py-3 font-semibold text-white transition rounded-lg bg-emerald-600 hover:bg-amber-700">
               View All Courses
             </button>
           </a>

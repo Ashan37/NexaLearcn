@@ -145,7 +145,7 @@ const AIChat = () => {
       
       <div className="flex flex-col flex-1">
         {/* Header */}
-        <div className="text-white bg-gradient-to-r from-indigo-600 to-purple-600">
+        <div className="text-white bg-gradient-to-r from-emerald-600 to-teal-600">
         <div className="max-w-5xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -154,7 +154,7 @@ const AIChat = () => {
               </div>
               <div>
                 <h1 className="text-3xl font-bold">AI Learning Assistant</h1>
-                <p className="mt-1 text-indigo-100">
+                <p className="mt-1 text-emerald-100">
                   Welcome back, {user.name}!
                 </p>
               </div>
@@ -184,7 +184,7 @@ const AIChat = () => {
               >
                 {message.role === "assistant" && (
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500">
                       <SparklesIcon className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -193,7 +193,7 @@ const AIChat = () => {
                 <div
                   className={`max-w-[80%] rounded-lg px-4 py-3 ${
                     message.role === "user"
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-emerald-600 text-white"
                       : "bg-gray-100 text-gray-900"
                   }`}
                 >
@@ -203,7 +203,7 @@ const AIChat = () => {
                   <p
                     className={`text-xs mt-1 ${
                       message.role === "user"
-                        ? "text-indigo-200"
+                        ? "text-emerald-200"
                         : "text-gray-500"
                     }`}
                   >
@@ -213,8 +213,8 @@ const AIChat = () => {
 
                 {message.role === "user" && (
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 bg-indigo-100 rounded-full">
-                      <UserCircleIcon className="w-6 h-6 text-indigo-600" />
+                    <div className="flex items-center justify-center w-10 h-10 bg-emerald-100 rounded-full">
+                      <UserCircleIcon className="w-6 h-6 text-emerald-600" />
                     </div>
                   </div>
                 )}
@@ -224,7 +224,7 @@ const AIChat = () => {
             {loading && (
               <div className="flex justify-start gap-3">
                 <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500">
                     <SparklesIcon className="w-6 h-6 text-white" />
                   </div>
                 </div>
@@ -258,7 +258,7 @@ const AIChat = () => {
                   <button
                     key={index}
                     onClick={() => handleSuggestedQuestion(question)}
-                    className="px-3 py-2 text-sm text-left text-gray-700 transition-colors bg-white border border-gray-200 rounded-lg hover:border-indigo-300 hover:bg-indigo-50"
+                    className="px-3 py-2 text-sm text-left text-gray-700 transition-colors bg-white border border-gray-200 rounded-lg hover:border-emerald-300 hover:bg-emerald-50"
                   >
                     {question}
                   </button>
@@ -276,12 +276,12 @@ const AIChat = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask me anything about learning, courses, or study tips..."
                 disabled={loading}
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none disabled:bg-gray-100 disabled:cursor-not-allowed"
               />
               <button
                 type="submit"
                 disabled={loading || !input.trim()}
-                className="flex items-center gap-2 px-6 py-3 text-white transition-colors bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 px-6 py-3 text-white transition-colors bg-emerald-600 rounded-lg hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
               >
                 <PaperAirplaneIcon className="w-5 h-5" />
                 Send
@@ -291,14 +291,14 @@ const AIChat = () => {
         </div>
 
         {/* Info Card */}
-        <div className="p-4 mt-6 border border-indigo-200 rounded-lg bg-indigo-50">
+        <div className="p-4 mt-6 border border-emerald-200 rounded-lg bg-emerald-50">
           <div className="flex gap-3">
-            <ChatBubbleLeftRightIcon className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+            <ChatBubbleLeftRightIcon className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="mb-1 font-semibold text-indigo-900">
+              <h3 className="mb-1 font-semibold text-emerald-900">
                 How can the AI assist you?
               </h3>
-              <ul className="space-y-1 text-sm text-indigo-700">
+              <ul className="space-y-1 text-sm text-emerald-700">
                 <li>
                   • Get personalized course recommendations based on your
                   interests

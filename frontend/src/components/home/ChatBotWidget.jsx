@@ -67,7 +67,7 @@ const ChatBotWidget = () => {
                 <div
                   className={`max-w-[80%] px-4 py-2 rounded-2xl text-sm ${
                     msg.sender === "user"
-                      ? "bg-purple-600 text-white rounded-br-none"
+                      ? "bg-emerald-600 text-white rounded-br-none"
                       : "bg-white text-gray-800 border border-purple-100 rounded-bl-none"
                   }`}
                 >

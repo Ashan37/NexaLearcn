@@ -90,14 +90,14 @@ const Contact = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
-      <div className="text-white bg-gradient-to-r from-indigo-600 to-indigo-800">
+      <div className="text-white bg-gradient-to-r from-emerald-600 to-teal-700">
         <div className="px-4 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="text-center">
-            <ChatBubbleLeftRightIcon className="w-16 h-16 mx-auto mb-6 text-indigo-200" />
+            <ChatBubbleLeftRightIcon className="w-16 h-16 mx-auto mb-6 text-emerald-200" />
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Get In Touch
             </h1>
-            <p className="max-w-3xl mx-auto text-xl text-indigo-100 md:text-2xl">
+            <p className="max-w-3xl mx-auto text-xl text-emerald-100 md:text-2xl">
               Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
             </p>
           </div>
@@ -112,8 +112,8 @@ const Contact = () => {
               key={index}
               className="p-6 transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
             >
-              <div className="flex items-center justify-center w-12 h-12 mb-4 bg-indigo-100 rounded-lg">
-                <info.icon className="w-6 h-6 text-indigo-600" />
+              <div className="flex items-center justify-center w-12 h-12 mb-4 bg-emerald-100 rounded-lg">
+                <info.icon className="w-6 h-6 text-emerald-600" />
               </div>
               <h3 className="mb-2 text-lg font-bold text-gray-900">
                 {info.title}
@@ -141,7 +141,7 @@ const Contact = () => {
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   Full Name
                 </label>
-                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                   <UserIcon className="w-5 h-5 text-gray-400" />
                   <input
                     type="text"
@@ -158,7 +158,7 @@ const Contact = () => {
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   Email Address
                 </label>
-                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                   <EnvelopeIcon className="w-5 h-5 text-gray-400" />
                   <input
                     type="email"
@@ -175,7 +175,7 @@ const Contact = () => {
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   Subject
                 </label>
-                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                   <ChatBubbleLeftRightIcon className="w-5 h-5 text-gray-400" />
                   <input
                     type="text"
@@ -198,7 +198,7 @@ const Contact = () => {
                   placeholder="Tell us more about your inquiry..."
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-3 text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                  className="w-full p-3 text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg resize-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                 ></textarea>
               </div>
 
@@ -217,7 +217,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center w-full gap-2 py-3 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+                className="flex items-center justify-center w-full gap-2 py-3 font-semibold text-white transition-all duration-200 bg-emerald-600 rounded-lg shadow-md hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   'Sending...'
@@ -265,9 +265,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-8 text-white bg-indigo-600 rounded-lg shadow-lg">
+            <div className="p-8 text-white bg-emerald-600 rounded-lg shadow-lg">
               <h2 className="mb-4 text-2xl font-bold">Connect With Us</h2>
-              <p className="mb-6 text-indigo-100">
+              <p className="mb-6 text-emerald-100">
                 Follow us on social media for updates, tips, and community highlights.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -275,7 +275,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={social.url}
-                    className="flex items-center gap-3 p-3 transition-colors bg-indigo-700 rounded-lg hover:bg-indigo-800"
+                    className="flex items-center gap-3 p-3 transition-colors bg-emerald-700 rounded-lg hover:bg-emerald-800"
                   >
                     <span className="text-2xl">{social.icon}</span>
                     <span className="font-medium">{social.name}</span>

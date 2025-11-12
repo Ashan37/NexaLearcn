@@ -77,8 +77,8 @@ const AddCourse = () => {
 
         <div className="p-6 mb-6 bg-white rounded-lg shadow-md">
           <div className="flex items-center gap-3 mb-2">
-            <div className="p-2 bg-indigo-100 rounded-lg">
-              <PlusCircleIcon className="w-8 h-8 text-indigo-600" />
+            <div className="p-2 bg-emerald-100 rounded-lg">
+              <PlusCircleIcon className="w-8 h-8 text-emerald-600" />
             </div>
             <h2 className="text-3xl font-bold text-gray-900">Add New Course</h2>
           </div>
@@ -108,7 +108,7 @@ const AddCourse = () => {
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Course Title <span className="text-red-500">*</span>
               </label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <AcademicCapIcon className="flex-shrink-0 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -136,7 +136,7 @@ const AddCourse = () => {
                   placeholder="Provide a detailed description of the course content, learning outcomes, and what students will gain..."
                   value={form.description}
                   onChange={handleChange}
-                  className="w-full py-3 pl-10 pr-3 text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg resize-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                  className="w-full py-3 pl-10 pr-3 text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg resize-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                 ></textarea>
               </div>
             </div>
@@ -152,7 +152,7 @@ const AddCourse = () => {
                   name="level"
                   value={form.level}
                   onChange={handleChange}
-                  className="w-full p-3 text-gray-900 bg-white border border-gray-300 rounded-lg appearance-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                  className="w-full p-3 text-gray-900 bg-white border border-gray-300 rounded-lg appearance-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                 >
                   <option value="">Select Level</option>
                   <option value="beginner">Beginner</option>
@@ -166,7 +166,7 @@ const AddCourse = () => {
                 <label className="block mb-2 text-sm font-medium text-gray-700">
                   Duration <span className="text-red-500">*</span>
                 </label>
-                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+                <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                   <ClockIcon className="flex-shrink-0 w-5 h-5 text-gray-400" />
                   <input
                     type="text"
@@ -185,7 +185,7 @@ const AddCourse = () => {
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Course Image URL
               </label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <PhotoIcon className="flex-shrink-0 w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -205,7 +205,7 @@ const AddCourse = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex items-center justify-center flex-1 gap-2 py-3 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+                className="flex items-center justify-center flex-1 gap-2 py-3 font-semibold text-white transition-all duration-200 bg-emerald-600 rounded-lg shadow-md hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   "Adding Course..."
@@ -235,12 +235,12 @@ const AddCourse = () => {
           </form>
         </div>
 
-        <div className="p-4 mt-6 border border-indigo-200 rounded-lg bg-indigo-50">
+        <div className="p-4 mt-6 border border-emerald-200 rounded-lg bg-emerald-50">
           <div className="flex gap-3">
-            <BookOpenIcon className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-0.5" />
+            <BookOpenIcon className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
             <div>
-              <h3 className="mb-1 font-semibold text-indigo-900">Course Guidelines</h3>
-              <ul className="space-y-1 text-sm text-indigo-700">
+              <h3 className="mb-1 font-semibold text-emerald-900">Course Guidelines</h3>
+              <ul className="space-y-1 text-sm text-emerald-700">
                 <li>• Ensure the course title is clear and descriptive</li>
                 <li>• Provide comprehensive course description</li>
                 <li>• Select appropriate difficulty level for target audience</li>

@@ -34,7 +34,7 @@ const Testimonials = () => {
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <h2 className="font-semibold tracking-wide text-purple-600 uppercase">Testimonials</h2>
+          <h2 className="font-semibold tracking-wide text-teal-600 uppercase">Testimonials</h2>
           <h1 className="mt-2 text-4xl font-bold text-gray-900">
             What Our Learners Say
           </h1>
@@ -58,7 +58,7 @@ const Testimonials = () => {
                   className="object-cover w-20 h-20 mb-4 border-4 border-purple-200 rounded-full"
                 />
                 <h3 className="text-xl font-semibold text-gray-900">{t.name}</h3>
-                <p className="text-sm font-medium text-purple-500">{t.role}</p>
+                <p className="text-sm font-medium text-teal-500">{t.role}</p>
 
                 {/* Stars */}
                 <div className="flex items-center justify-center gap-1 mt-3">
@@ -85,7 +85,7 @@ const Testimonials = () => {
 
         {/* Call-to-Action */}
         <div className="mt-16 text-center">
-          <button className="px-8 py-3 font-semibold text-white transition rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600">
+          <button className="px-8 py-3 font-semibold text-white transition rounded-lg bg-emerald-600 hover:from-purple-700 hover:to-pink-600">
             Share Your Experience
           </button>
         </div>

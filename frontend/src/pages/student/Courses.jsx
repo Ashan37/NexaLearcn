@@ -110,14 +110,14 @@ const Courses = () => {
 
       <div className="flex-1">
         {/* Header Section */}
-        <div className="text-white bg-gradient-to-r from-indigo-600 to-indigo-800">
+        <div className="text-white bg-gradient-to-r from-emerald-600 to-teal-700">
           <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="text-center">
-              <AcademicCapIcon className="w-16 h-16 mx-auto mb-4 text-indigo-200" />
+              <AcademicCapIcon className="w-16 h-16 mx-auto mb-4 text-emerald-200" />
               <h1 className="mb-4 text-4xl font-bold md:text-5xl">
                 Explore Our Courses
               </h1>
-              <p className="max-w-2xl mx-auto text-xl text-indigo-100">
+              <p className="max-w-2xl mx-auto text-xl text-emerald-100">
                 Learn from industry experts and advance your career with our
                 comprehensive course catalog
               </p>
@@ -137,7 +137,7 @@ const Courses = () => {
                     placeholder="Search courses..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                    className="w-full py-3 pl-10 pr-4 border border-gray-300 rounded-lg focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                   />
                 </div>
               </div>
@@ -148,7 +148,7 @@ const Courses = () => {
                   <select
                     value={selectedLevel}
                     onChange={(e) => setSelectedLevel(e.target.value)}
-                    className="w-full py-3 pl-10 pr-4 bg-white border border-gray-300 rounded-lg appearance-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                    className="w-full py-3 pl-10 pr-4 bg-white border border-gray-300 rounded-lg appearance-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                   >
                     <option value="all">All Levels</option>
                     <option value="beginner">Beginner</option>
@@ -164,7 +164,7 @@ const Courses = () => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full py-3 pl-10 pr-4 bg-white border border-gray-300 rounded-lg appearance-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none"
+                    className="w-full py-3 pl-10 pr-4 bg-white border border-gray-300 rounded-lg appearance-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 focus:outline-none"
                   >
                     {categories.map((cat) => (
                       <option key={cat} value={cat}>
@@ -321,12 +321,12 @@ const Courses = () => {
           </div>
 
           {!loading && filteredCourses.length > 0 && (
-            <div className="p-8 mt-16 text-center text-white rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-800">
-              <AcademicCapIcon className="w-12 h-12 mx-auto mb-4 text-indigo-200" />
+            <div className="p-8 mt-16 text-center text-white rounded-lg bg-gradient-to-r from-emerald-600 to-teal-700">
+              <AcademicCapIcon className="w-12 h-12 mx-auto mb-4 text-emerald-200" />
               <h2 className="mb-4 text-3xl font-bold">
                 Can't Find What You're Looking For?
               </h2>
-              <p className="max-w-2xl mx-auto mb-6 text-indigo-100">
+              <p className="max-w-2xl mx-auto mb-6 text-emerald-100">
                 We're constantly adding new courses. Contact us to suggest
                 topics or request custom training.
               </p>

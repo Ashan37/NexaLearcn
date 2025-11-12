@@ -92,7 +92,7 @@ const Signup = () => {
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Full Name
               </label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <UserIcon className="w-5 h-5 text-gray-400" />
                 <input
                   type="text"
@@ -109,7 +109,7 @@ const Signup = () => {
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Email Address
               </label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <EnvelopeIcon className="w-5 h-5 text-gray-400" />
                 <input
                   type="email"
@@ -126,7 +126,7 @@ const Signup = () => {
               <label className="block mb-2 text-sm font-medium text-gray-700">
                 Password
               </label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <LockClosedIcon className="w-5 h-5 text-gray-400" />
                 <input
                   type={showPassword ? "text" : "password"}
@@ -156,7 +156,7 @@ const Signup = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-emerald-600 rounded-lg shadow-md hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
             >
               {loading ? "Creating Account..." : "Sign Up"}
             </button>
@@ -166,7 +166,7 @@ const Signup = () => {
             Already have an account?{" "}
             <a
               href="/signin"
-              className="font-semibold text-indigo-600 hover:text-indigo-700 hover:underline"
+              className="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline"
             >
               Sign In
             </a>

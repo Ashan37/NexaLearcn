@@ -24,7 +24,7 @@ const Hero = () => {
 
           <h1 className="mb-6 text-5xl font-extrabold leading-tight text-gray-700 transition-all duration-500 transform md:text-6xl lg:text-7xl hover:scale-105 animate-slide-up-delay drop-shadow-2xl">
             Your AI Learning
-            <span className="block text-indigo-800">
+            <span className="block text-emerald-800">
               Companion
             </span>
           </h1>
@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex flex-col gap-4 sm:flex-row animate-fade-in-late">
             <a
               href="/signup"
-              className="inline-flex items-center justify-center w-full px-8 py-4 text-sm font-bold text-white transition-all duration-300 transform bg-indigo-600 shadow-2xl rounded-xl hover:bg-indigo-700 hover:scale-110 hover:shadow-indigo-500/50 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto group"
+              className="inline-flex items-center justify-center w-full px-8 py-4 text-sm font-bold text-white transition-all duration-300 transform bg-emerald-600 shadow-2xl rounded-xl hover:bg-emerald-700 hover:scale-110 hover:shadow-emerald-500/50 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 sm:w-auto group"
             >
               Get Started
               <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

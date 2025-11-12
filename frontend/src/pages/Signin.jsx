@@ -75,7 +75,7 @@ const Signin = () => {
  
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <EnvelopeIcon className="w-5 h-5 text-gray-400" />
                 <input
                   type="email"
@@ -90,7 +90,7 @@ const Signin = () => {
 
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-700">Password</label>
-              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-200">
+              <div className="flex items-center gap-2 p-3 border border-gray-300 rounded-lg focus-within:border-emerald-500 focus-within:ring-2 focus-within:ring-emerald-200">
                 <LockClosedIcon className="w-5 h-5 text-gray-400" />
                 <input
                   type={showPassword ? "text" : "password"}
@@ -118,11 +118,11 @@ const Signin = () => {
               <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
-                  className="w-4 h-4 border-gray-300 rounded accent-indigo-600 focus:ring-2 focus:ring-indigo-500"
+                  className="w-4 h-4 border-gray-300 rounded accent-emerald-600 focus:ring-2 focus:ring-emerald-500"
                 />
                 Remember me
               </label>
-              <a href="/forgot-password" className="font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+              <a href="/forgot-password" className="font-medium text-emerald-600 hover:text-emerald-700 hover:underline">
                 Forgot password?
               </a>
             </div>
@@ -132,7 +132,7 @@ const Signin = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-offset-2 disabled:bg-indigo-400 disabled:cursor-not-allowed"
+              className="w-full py-3 mt-4 font-semibold text-white transition-all duration-200 bg-emerald-600 rounded-lg shadow-md hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-offset-2 disabled:bg-emerald-400 disabled:cursor-not-allowed"
             >
               {loading ? "Signing In..." : "Sign In"}
             </button>
@@ -160,7 +160,7 @@ const Signin = () => {
         
         <p className="mt-6 text-sm text-center text-gray-600">
           Don't have an account?{" "}
-          <a href="/signup" className="font-semibold text-indigo-600 hover:text-indigo-700 hover:underline">
+          <a href="/signup" className="font-semibold text-emerald-600 hover:text-emerald-700 hover:underline">
             Sign Up
           </a>
         </p>
